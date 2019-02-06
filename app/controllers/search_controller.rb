@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    thing = params[:thing]
+    zip_code = params[:zip_code]
 
     @conn = Faraday.new(url: "") do |faraday|
       faraday.headers[""] = ""
