@@ -1,9 +1,9 @@
-<%= @stations.count %> Results
+<%= @stations.count %> Results Displayed
 <% @stations.each do |station| %>
   <ul class="station">
-    <li class="name" ><%= station.name %></li>
-    <li class="address"><%= station.address %></li>
-    <li class="fuel_types"><%= station.fuel_types %></li>
-    <li class="access_times"><%= station.access_times %></li>
+    <li class="name" >Station Name: <%= station.name %></li>
+    <li class="address">Station Address: <%= station.address %></li>
+    <li class="fuel_types">Station Fuel Types: <%= station.fuel_types %></li>
+    <li class="access_times">Station Access Times: <%= station.access_times %></li>
   </ul>
 <% end %>

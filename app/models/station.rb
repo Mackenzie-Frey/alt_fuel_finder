@@ -5,7 +5,6 @@ class Station
               :access_times
 
   def initialize(attributes = {})
-    binding.pry
     @name = attributes[:station_name]
     @address = attributes[:street_address]
     @fuel_types = attributes[:fuel_type_code]
