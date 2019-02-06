@@ -18,5 +18,11 @@ describe 'As a User visiting / I fill in the search form' do
     end
 
   end
+  # My next steps would be to refactor by moving the logic in the SearchController index method into the StationService.
+  # I would also break out those methods in accordance with the Single Responsibility Principle.
+  # From there I would calculate the distance of the station from the zip code searched and print
+  # it to the page for each station, with first integrating a test to insure it appears to the page, along with a model test to insure my caluculation is correct.
+  # I would also test my sort method for distance on a model and feature level.
+  # I recognize my testing for the api could be made more verbose.
 
 end
