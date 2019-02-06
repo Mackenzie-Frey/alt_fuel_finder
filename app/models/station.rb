@@ -2,20 +2,14 @@ class Station
   attr_reader :name,
               :address,
               :fuel_types,
-              :distance,
               :access_times
 
   def initialize(attributes = {})
-    @name = attributes[:name]
-    @address = attributes[:address]
-    @fuel_types = attributes[:fuel_types]
-    @distance = attributes[:distance]
-    @access_times = attributes[:access_times]
+    binding.pry
+    @name = attributes[:station_name]
+    @address = attributes[:street_address]
+    @fuel_types = attributes[:fuel_type_code]
+    @access_times = attributes[:access_days_time]
   end
-
-  # def find_all
-  #   stations = StationService.find_stations.map do |station|
-  #   Station.new(station)
-  # end
 
 end
