@@ -8,17 +8,16 @@ describe 'As a User visiting / I fill in the search form' do
 
     expect(current_path).to eq('/search')
 
-    expect(returned_array.count).to eq(10)
-    expect(page).to not_have_content('')
-    expect(page).to not_have_content('')
+    expect(page).to have_content("10 Results")
 
-    within '.thing-1' do
-      expect(page).to have_content(thing_1.name)
-      expect(page).to have_content(thing_1.address)
-      expect(page).to have_content(thing_1.fuel_types)
-      expect(page).to have_content(thing_1.distance)
-      expect(page).to have_content(thing_1.access_times)
+    within(first('.station')) do
+      expect(page).to have_css(".name")
+      expect(page).to have_css(".address")
+      expect(page).to have_css(".fuel_types")
+      expect(page).to have_css(".distance")
+      expect(page).to have_css(".access_times")
     end
+
   end
   #sorted by distance
 end
