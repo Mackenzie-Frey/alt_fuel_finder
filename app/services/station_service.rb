@@ -9,19 +9,19 @@ class StationService
   #   @musicians = JSON.parse(response.body, symbolize_names: true)
   # end
 
-  def self.find_stations
-    zip_code = params[:zip_code]
+  # def self.find_stations
+  #   zip_code = params[:zip_code]
+  #
+  #   @conn = Faraday.new(url: "https://developer.nrel.gov") do |faraday|
+  #     # faraday.headers["X-API-KEY"] = ENV['API_KEY']
+  #     faraday.adapter Faraday.default_adapter
+  #   end
+  #
+  #   response = @conn.get("/api/alt-fuel-stations/v1/nearest.format?location=#{zip_code}&fuel_type=ELEC&fuel_type=LPG&radius=6.0&limit=10&api_key=#{ENV['API_KEY']}")
+  #
+  #   @stations = JSON.parse(response.body, symbolize_names: true)[:results]
+  # end
 
-    @conn = Faraday.new(url: "https://developer.nrel.gov") do |faraday|
-      # faraday.headers["X-API-KEY"] = ENV['API_KEY']
-      faraday.adapter Faraday.default_adapter
-    end
-
-    response = @conn.get("/api/alt-fuel-stations/v1/nearest.format?location=#{zip_code}&fuel_type=ELEC&fuel_type=LPG&radius=6.0&limit=10&api_key=#{ENV['API_KEY']}")
-
-    @stations = JSON.parse(response.body, symbolize_names: true)[:results]
-  end
-  
 end
 
 # class MusicianService

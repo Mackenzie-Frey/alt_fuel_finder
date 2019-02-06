@@ -9,9 +9,9 @@ class Station
     @access_times = attributes[:access_times]
   end
 
-  def find_all
-    stations = StationService.find_stations.map do |station|
-    Station.new(station)
-  end
-  
+  # def find_all
+  #   stations = StationService.find_stations.map do |station|
+  #   Station.new(station)
+  # end
+
 end
