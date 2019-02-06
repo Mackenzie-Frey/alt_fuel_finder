@@ -1,3 +1,4 @@
+<%= @stations.count %> Results
 <% @stations.each do |station| %>
   <ul class="station">
     <li class="name" ><%= station.name %></li>
@@ -6,4 +7,4 @@
     <li class="distance"><%= station.distance %></li>
     <li class="access_times"><%= station.access_times %></li>
   </ul>
-<% end %>rs
+<% end %>
