@@ -14,12 +14,12 @@ describe 'As a User visiting / I fill in the search form' do
       expect(page).to have_css(".name")
       expect(page).to have_css(".address")
       expect(page).to have_css(".fuel_types")
-      expect(page).to have_css(".distance")
       expect(page).to have_css(".access_times")
     end
 
   end
-  #sorted by distance
+  #sorted by distance (and display to page)
+
 end
 #
 # As a user

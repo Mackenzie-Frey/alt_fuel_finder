@@ -4,7 +4,6 @@ class SearchController < ApplicationController
     zip_code = params[:zip_code]
 
     @conn = Faraday.new(url: "https://developer.nrel.gov") do |faraday|
-      # faraday.headers["X-API-KEY"] = ENV["API_KEY"]
       faraday.adapter Faraday.default_adapter
     end
 
