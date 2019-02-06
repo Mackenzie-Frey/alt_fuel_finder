@@ -20,6 +20,7 @@ describe 'As a User visiting / I fill in the search form' do
       expect(page).to have_content(thing_1.access_times)
     end
   end
+  #sorted by distance
 end
 #
 # As a user
